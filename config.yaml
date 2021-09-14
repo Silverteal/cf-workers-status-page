@@ -33,3 +33,30 @@ monitors:
     expectStatus: 404
     followRedirect: false
     linkable: false
+    
+  - id: bmclapi-bangbang93-com
+    name: BMCLAPI
+    description: 'BMCLAPI的原始服务'
+    url: 'http://bmclapi.bangbang93.com/java/list'
+    method: GET
+    expectStatus: 200
+    followRedirect: true
+    linkable: true
+    
+  - id: bmclapi2-bangbang93-com
+    name: BMCLAPI2
+    description: 'BMCLAPI的原始服务'
+    url: 'http://bmclapi2.bangbang93.com/java/list'
+    method: GET
+    expectStatus: 200
+    followRedirect: true
+    linkable: true
+    
+  - id: download-mcbbs-net
+    name: MCBBS Mirror
+    description: 'BMCLAPI的合作方MCBBS提供的镜像'
+    url: 'http://download.mcbbs.net/java/list'
+    method: GET
+    expectStatus: 200
+    followRedirect: true
+    linkable: true
