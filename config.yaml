@@ -2,17 +2,17 @@ settings:
   title: 'OpenBMCLAPI/BMCLAPI.com部分服务状态'
   url: 'https://status-page.eidam.dev' # used for Slack messages
   logo: logo-192x192.png # image in ./public/ folder
-  daysInHistogram: 30 # number of days you want to display in histogram
+  daysInHistogram: 90 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
 
-  allmonitorsOperational: '一切正常'
-  notAllmonitorsOperational: '需要关注'
+  allmonitorsOperational: '所有服务都非常稳定的运行了，不可思议！'
+  notAllmonitorsOperational: '似乎有些服务不是太稳定。'
   monitorLabelOperational: '正在运行'
   monitorLabelNotOperational: '需要关注'
   monitorLabelNoData: '无数据'
   dayInHistogramNoData: '无数据'
   dayInHistogramOperational: '一切正常'
-  dayInHistogramNotOperational: ' 故障' # xx incident(s) recorded
+  dayInHistogramNotOperational: ' 次中断' # xx incident(s) recorded
 
 monitors:
 
