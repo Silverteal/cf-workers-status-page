@@ -28,7 +28,7 @@ monitors:
   - id: bd-bangbang93-com
     name: BMCLAPI 仪表板
     description: 'OpenBMCLAPI的状态监视页。'
-    url: 'http://bmclapidoc.bangbang93.com/'
+    url: 'http://bd.bangbang93.com/'
     method: GET
     expectStatus: 200
     followRedirect: false
