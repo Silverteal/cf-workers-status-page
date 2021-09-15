@@ -12,13 +12,58 @@ settings:
   monitorLabelNoData: '无数据'
   dayInHistogramNoData: '无数据'
   dayInHistogramOperational: '一切正常'
-  dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
+  dayInHistogramNotOperational: ' 故障' # xx incident(s) recorded
 
 monitors:
 
+  - id: bmclapidoc-bangbang93-com
+    name: BMCLAPI 文档
+    description: 'BMCLAPI的文档，如果连这个都炸了，那问题就大了。'
+    url: 'http://bmclapidoc.bangbang93.com/'
+    method: GET
+    expectStatus: 200
+    followRedirect: false
+    linkable: true
+    
+  - id: bd-bangbang93-com
+    name: BMCLAPI 仪表板
+    description: 'OpenBMCLAPI的状态监视页。'
+    url: 'http://bmclapidoc.bangbang93.com/'
+    method: GET
+    expectStatus: 200
+    followRedirect: false
+    linkable: true
+    
+  - id: bmclapi-bangbang93-com
+    name: BMCLAPI 下载源
+    #description: 'BMCLAPI'
+    url: 'http://bmclapi.bangbang93.com/java/list'
+    method: GET
+    expectStatus: 200
+    followRedirect: true
+    linkable: true
+    
+  - id: bmclapi2-bangbang93-com
+    name: BMCLAPI 下载源 2
+    description: 'BMCLAPI的另一个路由'
+    url: 'http://bmclapi2.bangbang93.com/java/list'
+    method: GET
+    expectStatus: 200
+    followRedirect: true
+    linkable: true
+    
+  - id: download-mcbbs-net
+    name: MCBBS 下载源
+    description: 'BMCLAPI的合作方MCBBS提供的下载源，终点独立于BMCLAPI'
+    url: 'http://download.mcbbs.net/java/list'
+    method: GET
+    expectStatus: 200
+    followRedirect: true
+    linkable: true
+    
   - id: cloudflare-cdn
     name: Cloudflare CDN
-    description: '通过Cloudflare代理的OBA服务'
+    description: '通过Cloudflare代理的一个BMCLAPI终点'
     url: 'http://cloudflare.cdn.open.bmclapi.com:8080/'
     method: GET
     expectStatus: 404
@@ -27,36 +72,10 @@ monitors:
 
   - id: bmclapi-com
     name: BMCLAPI.com
-    description: 'BMCLAPI.com提供的OBA服务'
+    description: 'BMCLAPI.com提供的一个BMCLAPI终点'
     url: 'http://zj-hz-1.chinanet.open.bmclapi.com:8080/'
     method: GET
     expectStatus: 404
     followRedirect: false
     linkable: false
     
-  - id: bmclapi-bangbang93-com
-    name: BMCLAPI
-    description: 'BMCLAPI的原始服务'
-    url: 'http://bmclapi.bangbang93.com/java/list'
-    method: GET
-    expectStatus: 200
-    followRedirect: true
-    linkable: true
-    
-  - id: bmclapi2-bangbang93-com
-    name: BMCLAPI2
-    description: 'BMCLAPI的原始服务'
-    url: 'http://bmclapi2.bangbang93.com/java/list'
-    method: GET
-    expectStatus: 200
-    followRedirect: true
-    linkable: true
-    
-  - id: download-mcbbs-net
-    name: MCBBS Mirror
-    description: 'BMCLAPI的合作方MCBBS提供的镜像'
-    url: 'http://download.mcbbs.net/java/list'
-    method: GET
-    expectStatus: 200
-    followRedirect: true
-    linkable: true
